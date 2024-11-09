@@ -55,5 +55,120 @@
             }
             to {
                 opacity: 1;
-    
+                transform: translateY(0);
+            }
+        }
+
+        /* Slide-up effect for the main content */
+        @keyframes slideUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .info {
+            margin-bottom: 20px;
+        }
+
+        .info span {
+            font-weight: bold;
+            color: #4CAF50;
+        }
+
+        .info p {
+            font-size: 1.2em;
+            margin: 15px 0;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .info p:hover {
+            transform: scale(1.05);
+            color: #4CAF50;
+        }
+
+        .photo {
+            text-align: center;
+            margin-top: 30px;
+            animation: fadeInImage 3s ease-out;
+        }
+
+        .photo img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .photo img:hover {
+            transform: scale(1.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Animation for image fade-in */
+        @keyframes fadeInImage {
+            from {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Add responsiveness */
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Portfolio ของสุภัสสรา สวน</h1>
+    </header>
+
+    <div class="container">
+        <section class="info">
+            <p><span>ชื่อ:</span> สุภัสสรา สวน</p>
+            <p><span>ชั้นเรียน:</span> ม.4/1</p>
+            <p><span>เกรดเฉลี่ย:</span> 3.69</p>
+            <p><span>ความสนใจ:</span> ชอบฟังเพลง</p>
+        </section>
+
+        <section class="photo">
+            <img src="https://via.placeholder.com/200" alt="Profile Photo">
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 สุภัสสรา สวน - Portfolio</p>
+    </footer>
+
+</body>
+</html>
+
+
 
